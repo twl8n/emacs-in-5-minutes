@@ -105,8 +105,8 @@ Seven keys you need to start
 ----------------------------
 
 ```
-key      binding
----      -------
+key      binding function
+---      ----------------
 
 Cancel:
 C-g      keyboard-quit (cancel)
@@ -127,7 +127,7 @@ Copy:    mark region start, move cursor to region end, copy
 C-SPC, move cursor, ESC-w
 
 Paste:
-C-y		 yank (paste)
+C-y      yank (paste)
 ```
 
 Use the cursor control keys (arrows), page-up, page-down, home, and

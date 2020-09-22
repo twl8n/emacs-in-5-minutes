@@ -105,29 +105,29 @@ Seven keys you need to start
 ----------------------------
 
 ```
-key             binding
----             -------
+key      binding
+---      -------
 
 Cancel:
-C-g		        keyboard-quit (cancel)
+C-g      keyboard-quit (cancel)
 
 Open file:
-C-x f		    find-file (open file)
+C-x f    find-file (open file)
 
 Save:
-C-x s		    save-buffer (save)
+C-x s    save-buffer (save)
 
 Save and exit
-C-x C-c		    save-buffers-kill-emacs (exit, quit)
+C-x C-c  save-buffers-kill-emacs (exit, quit)
 
-Cut:            mark region start, move cursor to region end, cut
+Cut:     mark region start, move cursor to region end, cut
 C-SPC, move cursor, C-w
 
-Copy:           mark region start, move cursor to region end, copy
+Copy:    mark region start, move cursor to region end, copy
 C-SPC, move cursor, ESC-w
 
 Paste:
-C-y		        yank (paste)
+C-y		 yank (paste)
 ```
 
 Use the cursor control keys (arrows), page-up, page-down, home, and

@@ -6,13 +6,13 @@ description:Quick notes on how to learn and use Emacs in less than five minutes.
 
 Table of contents
 -----------------
-What is Emacs?
-Introduction to Emacs keys
-Review
-Seven keys you need to start
-Minibuffer
-Get my .emacs (dot-emacs) init file
-Other key bindings
+- What is Emacs?
+- Introduction to Emacs keys
+- Review
+- Seven keys you need to start
+- Minibuffer
+- Get my .emacs (dot-emacs) init file
+- Other key bindings
 
 
 

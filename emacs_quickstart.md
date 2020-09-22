@@ -50,24 +50,37 @@ Introduction to Emacs keys
 
 There are only 7 keyboard commands necessary to use Emacs effectively.
 
-Using emacs requires use of the control and escape keys.
+Using emacs requires use of the control, command/alt, and option keys, which work similarly to the shift key.
+(Emacs also uses shift key combinations). The ESC key can be used as well, and the tab key often does useful
+things (like command completion).
+
 In the notes below, this is how these keys are denoted:
 
 C		Control key, Ctrl
-ESC		Escape key, Esc, also called the "meta" key
+M       Meta
+S       Super
+shift   (we never show this, but UPPERCASE is different than lowerase)
+ESC		Escape key
+
+- On Mac command key is the Meta key. 
+- On Mac the option key is the super key.
+
+- On Windows I think the Alt key is the Meta key.
+- On Windows I don't know what the super key is. Sorry.
 
 For example, C-x means hold down the control key and the x key, then
 release both keys. Multiple keystrokes are separated by a space. C-x s
 means do C-x as above, release both keys, then press s and release.
 
-The Esc key is known as "meta" or "the escape key". ESC-x
-means press ESC and release, then press x and release. M-x has the
-same meaning.
+Meta is similar to control. M-x is: press and hold Command, press x, release both keys.
+
+On all computers, and in terminals (or terminal applications) you may also use the Esc key "the escape key" to
+simulate the meta key. Thus and alternative M-x is: press ESC and release, then press x and release.
 
 The space bar is called spc or SPC. The enter key is RET (historically
 known as the return key).
 
-The action of a key is called the "binding". 
+The association of key and some action/function is called a "binding". 
 
 Use C-g to cancel any running command or any multi-key operation.
 
@@ -76,44 +89,46 @@ Use C-g to cancel any running command or any multi-key operation.
 Review
 ------
 
-C-x is press Ctrl and x, then release both keys.
+C-x is press and hold Ctrl, then press x, then release both keys.
 
-C-x s is press Ctrl and x, release both, then press s and release.
+C-x s is press and hold Ctrl, then press x, release both, then press s and release.
 
-M-x is press Esc and release, then press x and release.
+M-x is press and hold meta (command or alt), then press x, and then release both keys
 
-C-g is press Ctrl and g, then release both keys. Use C-g to cancel.
+C-x C-c is press and hold ctrl, press x, release both, press+hold ctrl, press c, release both
+
+C-g is press and hold Ctrl, then press g, then release both keys. Use C-g to cancel.
 
 
 
 Seven keys you need to start
 ----------------------------
 
+```
 key             binding
 ---             -------
 
 Cancel:
-C-g		keyboard-quit (cancel)
+C-g		        keyboard-quit (cancel)
 
 Open file:
-C-x f		find-file (open file)
+C-x f		    find-file (open file)
 
 Save:
-C-x s		save-buffer (save)
+C-x s		    save-buffer (save)
 
 Save and exit
-C-x C-c		save-buffers-kill-emacs (exit, quit)
+C-x C-c		    save-buffers-kill-emacs (exit, quit)
 
-Cut:
-mark, move cursor, cut
+Cut:            mark region start, move cursor to region end, cut
 C-SPC, move cursor, C-w
 
-Copy:
-mark, move cursor, copy
+Copy:           mark region start, move cursor to region end, copy
 C-SPC, move cursor, ESC-w
 
 Paste:
-C-y		yank (paste)
+C-y		        yank (paste)
+```
 
 Use the cursor control keys (arrows), page-up, page-down, home, and
 end to navigate (that is: to move the cursor). Running Emacs in a
@@ -152,7 +167,7 @@ your home directory. My .emacs contains improved key bindings and many
 useful additions. You can modify the .emacs file, and move it onto all
 systems where you work.
 
-http://defindit.com/readme_files/tom_emacs.txt
+https://github.com/twl8n/dotfiles_emacs_shell
 
 Linux and OSX: download to your home directory and rename to .emacs
 
@@ -185,17 +200,12 @@ The keys above are the minimal commands necessary to use emacs,
 assuming you use the use the keyboard arrow keys to move the
 cursor. Below is a more-or-less complete list of bindings.
 
-The M-x binding is speaicl. When you do M-x the text "M-x " will
+The M-x binding is special. When you do M-x the text "M-x " will
 appear in the "mini-buffer" at the bottom of the emacs screen. M-x is
-the Emacs "command mode". M-x expects you to enter a command, then
+the Emacs "command mode". M-x expects you to enter a command (aka a function), then
 press the Enter (return) key to run the command. Commands will
-auto-complete if you press the spacebar.
+auto-complete if you press the spacebar or tab key.
 
-Holding down the Alt key and pressing a second key (the release both
-keys) behaves as though you pressed ESC, released it, then pressed a
-second key. For example, "press and hold Alt, then press x, then
-release both" is identical to "press and release ESC, press and
-release x". The Alt shortcut is handy for certain scrolling commands.
 
 
 key             binding
@@ -232,7 +242,7 @@ replace with "perl -cw filename.pl" and press Enter/Return to begin compiling.
 
 C-x c		compile
 C-x C-n		next-error (go to next error shown in compile results)
-ESC g		goto-line
+M-g	    	goto-line
 
 C-w		kill-region (cut)
 C-y		yank (paste)
@@ -243,7 +253,7 @@ C-x C-r		find-file-read-only (open read-only)
 C-x s		save-buffer (save)
 C-x C-s		save-buffer (save)
 C-x C-w		write-file (save-as)
-ESC w		append-next-kill (copy)
+M-w			append-next-kill (copy)
 
 C-SPC		set-mark-command (mark start of cut/copy)
 C-a		beginning-of-line (move cursor home)
@@ -300,9 +310,9 @@ C-x f		find-file (open file)
 
 C-x k		kill-buffer (close file)
 
-ESC w		append-next-kill (copy)
+M-w	    	append-next-kill (copy)
 ESC ESC		repeat-complex-command
-ESC g		goto-line
+M-g	        goto-line
 
 Useful commands to try via M-x
 ------------------------------
